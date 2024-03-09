@@ -2,12 +2,13 @@
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
-| Group \#:      |     |
-| -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Group  8  |
+| :--------------:|
+| **Student Names**      |
+|       Stevan Beljic            |
+|        Aaron Giang             |
+|        Angelo Troncone             |
+|        Rutvi Brahmbhatt             |
 
 # Introduction
 
