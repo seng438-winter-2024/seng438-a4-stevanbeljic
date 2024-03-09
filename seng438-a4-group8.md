@@ -12,11 +12,47 @@
 
 # Introduction
 
+This fourth lab is separated into two main components.
+<br><br>
+The first objective of the lab is to utilize mutation testing tools (such as Pitest) to assess the effectiveness of our test suites from previous labs, by creating mutants of the SUT and running tests to detect the mutants. 
+<br><br>
+The second objective of the lab is to learn how to perform automated GUI testing using tools such as Selenium, and how record and replay tools can be beneficial towards the development of GUIs.
 
 # Analysis of 10 Mutants of the Range class 
+### Mutant 1
+Stuff
+### Mutant 2
+Stuff
+### Mutant 3
+Stuff
+### Mutant 4
+Stuff
+### Mutant 5
+Stuff
+### Mutant 6
+Stuff
+### Mutant 7
+Stuff
+### Mutant 8
+Stuff
+### Mutant 9
+Stuff
+### Mutant 10
+Stuff
 
 # Report all the statistics and the mutation score for each test class
 
+### Original Scores
+**DataUtilities.java**<br>
+<img width="608" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/ab9f3539-0063-48e7-b232-ebc7a5f0b898">
+<br>
+<br>
+**Range.java**<br>
+screenshot here
+### Updated Scores
+**DataUtilities.java**
+
+**Range.java**
 
 
 # Analysis drawn on the effectiveness of each of the test classes
