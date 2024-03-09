@@ -64,7 +64,7 @@ screenshot here
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
 # Explain your SELENUIM test case design process
-
+Our test case design process started similar to test case design from previous labs: we started with familiarization with the SUT (in this case, samsung.com/ca). Before we can even begin to test the Samsung GUI, we needed to first familiarize ourselves with the workings of the website and what a typial task flow would look like. Afterwards, we began to list out potential task flows and separating those into smaller, testable units. After that planning phase, we began actual development of the test cases, making sure we covered every major aspect touched upon in our initial planning. Finally, we reviewed the replays of our recordings to ensure the correct data was being input and captured.
 # Explain the use of assertions and checkpoints
 
 # how did you test each functionaity with different test data
