@@ -19,25 +19,25 @@ The first objective of the lab is to utilize mutation testing tools (such as Pit
 The second objective of the lab is to learn how to perform automated GUI testing using tools such as Selenium, and how record and replay tools can be beneficial towards the development of GUIs.
 
 # Analysis of 10 Mutants of the Range class 
-### Mutant 1
+### 1.getCentralValue() - Survived
+In getCentralValue(), the mutation "replaced double return with 0.0d" survives because we only have a single test which tests the method, and the test expects a value of 0 to be returned. Therefore, by implementing another test wherein it expects a returned value not equal to 0, such as the central value between 1 and 3 which would be 2, we can catch and kill this mutant. This was done in ```testCentralValuePositive```.
+### 2.intersects() - Survived
+In intersects(), the mutation "changed conditional boundary" survives because before we did not have a test which tested an intersect which occurred precisely on the boundary condition. We had a test case, ```intersectsOnBoundsTest```, however it was impoperly written and did not actually test for intersections at the boundaries. The test's conditions have been changed to test intersections on the lower bound of the provided range (1, 2) as well as another test has been created to test intersections at the upper bound of the provided range (-3, -1).
+### 3.shiftWithNoZeroCrossing() - Survived
+In shiftWithNoZeroCrossing(), the mutation "changed conditional boundary" survives because we never tested that method being called where both values are negative, or where the sum of either value and the delta is still below 0. Two tests are added to the test suite, ```shiftWithNoZeroCrossingBothZeroTest``` with values 0, 0, and a delta of 1, and ```shiftWithNoZeroCrossingUpperZeroTest``` with values -5, -3, and a delta of 2 to kill these mutants.
+### 4.Mutant 4
 Stuff
-### Mutant 2
+### 5.Mutant 5
 Stuff
-### Mutant 3
+### 6.Mutant 6
 Stuff
-### Mutant 4
+### 7.Mutant 7
 Stuff
-### Mutant 5
+### 8.Mutant 8
 Stuff
-### Mutant 6
+### 9.Mutant 9
 Stuff
-### Mutant 7
-Stuff
-### Mutant 8
-Stuff
-### Mutant 9
-Stuff
-### Mutant 10
+### 10.Mutant 10
 Stuff
 
 # Report all the statistics and the mutation score for each test class
@@ -48,7 +48,8 @@ Stuff
 <br>
 <br>
 **Range.java**<br>
-screenshot here
+<img width="607" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/826b41f9-8038-460b-8750-fdc39fb2f9b3">
+
 ### Updated Scores
 **DataUtilities.java**
 
