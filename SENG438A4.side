@@ -1,0 +1,474 @@
+{
+  "id": "717df560-678e-487a-ab74-3731881cd189",
+  "version": "2.0",
+  "name": "SENG438A4",
+  "url": "https://www.samsung.com",
+  "tests": [{
+    "id": "10fe4a1f-c425-4525-932d-deaf80ff2e56",
+    "name": "Log In - Valid User",
+    "commands": [{
+      "id": "2ff68bcb-9ab6-4c88-9e38-6390ae4c067c",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d85b6c0e-ca67-4b16-b0ad-ce2ee322e5c0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1520x970",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0a0038b-998e-4154-8c6b-590b8c6cc0ed",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.js-global-cart-btn use",
+      "targets": [
+        ["css=.js-global-cart-btn use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8366df27-4034-49b5-96ec-68b1bdc3f296",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.js-global-cart-btn use",
+      "targets": [
+        ["css=.js-global-cart-btn use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "14af68b5-416c-4dea-b132-a822a7771f9e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f00147d-7198-46e0-9d83-6fc7a4bd42db",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9506bdf-6b22-4285-b299-093369f3bed8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mobile-only > .icon",
+      "targets": [
+        ["css=.mobile-only > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "80c0f88e-6df6-41d6-85e7-7b56ae159e8e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "54470261-fb1d-4fec-b203-4735d073386e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5dbfc3d-90c4-4740-b7cd-c6e35d53a3fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mobile-only > .icon",
+      "targets": [
+        ["css=.mobile-only > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "973b3cc4-7e3a-40d3-9bf7-a2692bd51cc4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nv00-gnb__utility-user-menu > .loginBtn",
+      "targets": [
+        ["css=.nv00-gnb__utility-user-menu > .loginBtn", "css:finder"],
+        ["xpath=(//a[contains(text(),'LOG IN/Sign-Up')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='component-id']/div/div[6]/div[3]/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//div[6]/div[3]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "399fa4ca-9a91-4a1e-898e-975c3cea53db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nv00-gnb__utility-user-menu > .loginBtn",
+      "targets": [
+        ["css=.nv00-gnb__utility-user-menu > .loginBtn", "css:finder"],
+        ["xpath=(//a[contains(text(),'LOG IN/Sign-Up')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='component-id']/div/div[6]/div[3]/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//div[6]/div[3]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2e3040c-160e-4dc6-829a-7ec10b5c7e79",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=iptLgnPlnID",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ea82a77-9903-4bb5-9cbc-3a92f09b2637",
+      "comment": "",
+      "command": "type",
+      "target": "id=iptLgnPlnID",
+      "targets": [
+        ["id=iptLgnPlnID", "id"],
+        ["css=#iptLgnPlnID", "css:finder"],
+        ["xpath=//input[@id='iptLgnPlnID']", "xpath:attributes"],
+        ["xpath=//div[@id='ctnLgnPlnID']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "stevanbeljicp@gmail.com"
+    }, {
+      "id": "a5799fa6-98ce-41a0-a564-9b03aef7e658",
+      "comment": "",
+      "command": "click",
+      "target": "id=iptLgnPlnID",
+      "targets": [
+        ["id=iptLgnPlnID", "id"],
+        ["css=#iptLgnPlnID", "css:finder"],
+        ["xpath=//input[@id='iptLgnPlnID']", "xpath:attributes"],
+        ["xpath=//div[@id='ctnLgnPlnID']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be965ad5-90d6-4b67-8b65-15cb0694dd96",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInButton",
+      "targets": [
+        ["id=signInButton", "id"],
+        ["css=#signInButton", "css:finder"],
+        ["xpath=//button[@id='signInButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6748455e-6f07-42d0-8f0a-08800ce72b37",
+      "comment": "",
+      "command": "type",
+      "target": "id=iptLgnPlnPD",
+      "targets": [
+        ["id=iptLgnPlnPD", "id"],
+        ["css=#iptLgnPlnPD", "css:finder"],
+        ["xpath=//input[@id='iptLgnPlnPD']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Password12?"
+    }, {
+      "id": "38d7a337-29eb-4a87-b80b-021c7b7d5efe",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInButton",
+      "targets": [
+        ["id=signInButton", "id"],
+        ["css=#signInButton", "css:finder"],
+        ["xpath=//button[@id='signInButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e183d13-ba26-4f66-87ed-94591f6c24a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.account-icon:nth-child(2) > .icon",
+      "targets": [
+        ["css=.account-icon:nth-child(2) > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ae11652-e7a4-4ce6-8103-172a7d65b277",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.nv00-gnb__l0-menu-wrap",
+      "targets": [
+        ["css=.nv00-gnb__l0-menu-wrap", "css:finder"],
+        ["xpath=//nav[@id='component-id']/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3e5e6bc3-64f6-406d-b16f-22b2cb20cdf6",
+    "name": "Log Out - Succesful",
+    "commands": [{
+      "id": "a020878d-3cfb-4ce7-b859-1364fdaa1c78",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dcd36e1-c645-478e-9372-f641f9aab490",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1504x956",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd17ab4e-d0f4-4a7f-b294-7f1f19997542",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.account-icon:nth-child(2) use",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3bc3c5c1-7b94-4aaf-bf55-5ed5518bba94",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=LOG OUT",
+      "targets": [
+        ["linkText=LOG OUT", "linkText"],
+        ["css=.logoutBtn", "css:finder"],
+        ["xpath=//a[contains(text(),'LOG OUT')]", "xpath:link"],
+        ["xpath=//nav[@id='component-id']/div/div[6]/div[4]/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://support-ca.samsung.com/seca/mysamsung/signOut.jsp')]", "xpath:href"],
+        ["xpath=//div[6]/div[4]/ul/li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'LOG OUT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "010788bd-a23d-4422-bb8b-d4e478cd98c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mobile-only > .icon",
+      "targets": [
+        ["css=.mobile-only > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "053e8e19-6688-4878-b804-2cecf319c962",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mobile-only > .icon",
+      "targets": [
+        ["css=.mobile-only > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b29c2d2-c335-4b06-930e-2b04dad4849f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.mobile-only > .icon",
+      "targets": [
+        ["css=.mobile-only > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "32d1b8f4-3213-4847-aefc-5175ffbf6b5d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.nv00-gnb__utility-user-menu > .loginBtn",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e55c51d2-db30-4fef-83ed-1387d713c887",
+    "name": "Log In - Invalid User",
+    "commands": [{
+      "id": "6190ea3c-9bc9-4268-9f02-ef9998f3fbbd",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e155eb2b-25c2-4017-89d9-6e39e1924133",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1520x970",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf2882f6-fb9d-4431-8a4e-24b56346351c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.js-global-cart-btn use",
+      "targets": [
+        ["css=.js-global-cart-btn use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "665018a2-83a8-4ff2-bab3-85f892974365",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.js-global-cart-btn use",
+      "targets": [
+        ["css=.js-global-cart-btn use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6babb921-906e-421b-900e-3176d963dbd6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b0296dd-f368-4359-8c67-c13c295bed9e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa6d33f6-64bb-4ef7-983d-7e768f2fedec",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mobile-only > .icon",
+      "targets": [
+        ["css=.mobile-only > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebc0d76d-a69d-4d38-9ed2-aaa37ba58f20",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0b3fbad-a2e0-4a01-8945-c619bad359f0",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.mobile-only > .icon > use",
+      "targets": [
+        ["css=.mobile-only > .icon > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "12840a0b-6a9f-430b-a8fa-6b57355525c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mobile-only > .icon",
+      "targets": [
+        ["css=.mobile-only > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "06e6a4b6-a2c0-4901-835b-ad78c1194e60",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nv00-gnb__utility-user-menu > .loginBtn",
+      "targets": [
+        ["css=.nv00-gnb__utility-user-menu > .loginBtn", "css:finder"],
+        ["xpath=(//a[contains(text(),'LOG IN/Sign-Up')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='component-id']/div/div[6]/div[3]/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//div[6]/div[3]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "035bfa10-b46b-4f5f-8c39-f3746ffff049",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nv00-gnb__utility-user-menu > .loginBtn",
+      "targets": [
+        ["css=.nv00-gnb__utility-user-menu > .loginBtn", "css:finder"],
+        ["xpath=(//a[contains(text(),'LOG IN/Sign-Up')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='component-id']/div/div[6]/div[3]/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//div[6]/div[3]/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c816992-6cd0-4d8c-b8d5-29eb9bb61e51",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=iptLgnPlnID",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e39afee9-cacf-4b0a-a667-3943f207fe2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=iptLgnPlnID",
+      "targets": [
+        ["id=iptLgnPlnID", "id"],
+        ["css=#iptLgnPlnID", "css:finder"],
+        ["xpath=//input[@id='iptLgnPlnID']", "xpath:attributes"],
+        ["xpath=//div[@id='ctnLgnPlnID']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "billybobjimbo"
+    }, {
+      "id": "f8edfe11-f635-4b0c-b56f-d3f86d5e8e16",
+      "comment": "",
+      "command": "click",
+      "target": "id=iptLgnPlnID",
+      "targets": [
+        ["id=iptLgnPlnID", "id"],
+        ["css=#iptLgnPlnID", "css:finder"],
+        ["xpath=//input[@id='iptLgnPlnID']", "xpath:attributes"],
+        ["xpath=//div[@id='ctnLgnPlnID']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e393195-6f90-4715-bee6-fe2d674dcfa9",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInButton",
+      "targets": [
+        ["id=signInButton", "id"],
+        ["css=#signInButton", "css:finder"],
+        ["xpath=//button[@id='signInButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b02361b-4c22-40fb-853a-23699227c1f5",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=02",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b3ca853d-14bc-437b-ac32-2cca4e9393b1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=02",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5b9f21bb-c767-4077-9d79-b9fda429c037",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.samsung.com/"],
+  "plugins": []
+}
