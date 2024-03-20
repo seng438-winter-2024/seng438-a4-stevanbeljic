@@ -594,7 +594,86 @@ public class RangeTest {
  		boolean returned = newRange.intersects(1, 1);
  		assertFalse(returned);
  	} 	
+ 	
+ 	@Test
+ 	public void testGetUpperNegative() {
+ 		Range newRange = new Range(-10, -2);
+ 		double upper = -2;
+ 		assertEquals(upper, newRange.getUpperBound(), 0.0001d);
+ 	}
+ 	
+ 	@Test
+ 	public void testGetUpperPositive() {
+ 		Range newRange = new Range(2, 10);
+ 		double upper = 10;
+ 		assertEquals(upper, newRange.getUpperBound(), 0.0001d);
+ 	}
+ 	
+ 	@Test
+ 	public void testGetLowerNegative() {
+ 		Range newRange = new Range(-10, -2);
+ 		double lower = -10;
+ 		assertEquals(lower, newRange.getLowerBound(), 0.0001d);
+ 	}
+ 	
+ 	@Test
+ 	public void testGetLowerPositive() {
+ 		Range newRange = new Range(2, 10);
+ 		double lower = 2;
+ 		assertEquals(lower, newRange.getLowerBound(), 0.0001d);
+ 	}
+ 	
+ 	@Test
+ 	public void intersectsTestMutation() {
+ 		Range newRange = new Range(5, 10);
+ 		boolean result = newRange.intersects(8, 7);
+ 		assertFalse(result);
+ 	}
 
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	@Test(expected = IllegalArgumentException.class)
+    public void testConstructorWithLowerGreaterThanUpper() {
+        double lower = 5.0;
+        double upper = 2.0;
+
+        Range range = new Range(lower, upper);
+    }
+
+    @Test
+    public void testConstructorWithLowerEqualToUpper() {
+        double value = 5.0;
+
+        Range range = new Range(value, value);
+
+        assertEquals(value, range.getLowerBound(), 0.0);
+        assertEquals(value, range.getUpperBound(), 0.0);
+    }
+
+    @Test
+    public void testConstructorWithLowerLessThanUpper() {
+        double lower = 2.0;
+        double upper = 5.0;
+
+        Range range = new Range(lower, upper);
+
+        assertEquals(lower, range.getLowerBound(), 0.0);
+        assertEquals(upper, range.getUpperBound(), 0.0);
+    }
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
  	/*
      * 
      * 
