@@ -44,7 +44,8 @@ Stuff
 
 ### Original Scores
 **DataUtilities.java**<br>
-<img width="608" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/ab9f3539-0063-48e7-b232-ebc7a5f0b898">
+<img width="607" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/113965086/bb6ab415-0913-44cd-b72b-3b804e2b2b91">
+
 <br>
 <br>
 **Range.java**<br>
@@ -52,7 +53,9 @@ Stuff
 
 ### Updated Scores
 **DataUtilities.java**<br>
-screenshot here
+<img width="608" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/ab9f3539-0063-48e7-b232-ebc7a5f0b898">
+<br>
+
 <br>
 **Range.java**<br>
 screenshot here
