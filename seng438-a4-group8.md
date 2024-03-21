@@ -25,12 +25,12 @@ In getCentralValue(), the mutation "replaced double return with 0.0d" survives b
 In intersects(), the mutation "changed conditional boundary" survives because before we did not have a test which tested an intersect which occurred precisely on the boundary condition. We had a test case, ```intersectsOnBoundsTest```, however it was impoperly written and did not actually test for intersections at the boundaries. The test's conditions have been changed to test intersections on the lower bound of the provided range (1, 2) as well as another test has been created to test intersections at the upper bound of the provided range (-3, -1).
 ### 3.shiftWithNoZeroCrossing() - Survived
 In shiftWithNoZeroCrossing(), the mutation "changed conditional boundary" survives because we never tested that method being called where both values are negative, or where the sum of either value and the delta is still below 0. Two tests are added to the test suite, ```shiftWithNoZeroCrossingBothZeroTest``` with values 0, 0, and a delta of 1, and ```shiftWithNoZeroCrossingUpperZeroTest``` with values -5, -3, and a delta of 2 to kill these mutants.
-### 4.Range(double lower, double upper) - Killed
-In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
+### 4. Range(double lower, double upper) - Survived
+In Range(double lower, double upper), the mutations "Decremented (--a) double local variable number 1" and "Incremented (--a) double local variable number 1" both survived in the instance when the lower was greater than the upper bound, causing the thrown error message to be returned improperly. The returned error message's values would have been altered from what the input truly was. For this, we implemented the test ```constructorErrorTest``` to check the message of the returned error, and ensure it matches a String correlating to the expected error message (with the correct lower and upper values). 
 ### 5.Mutant 5
 Stuff
-### 6.Mutant 6
-Stuff
+### 6.Range(double lower, double upper) - Killed
+In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
 ### 7.Mutant 7
 Stuff
 ### 8.Mutant 8
@@ -42,26 +42,28 @@ Stuff
 
 # Report all the statistics and the mutation score for each test class
 
-### Original Scores
+## Original Scores
 **DataUtilities.java**<br>
 <img width="607" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/113965086/bb6ab415-0913-44cd-b72b-3b804e2b2b91">
 
 <br>
 <br>
+
 **Range.java**<br>
 <img width="607" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/826b41f9-8038-460b-8750-fdc39fb2f9b3">
 
-### Updated Scores
+## Updated Scores
 **DataUtilities.java**<br>
 <img width="608" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/ab9f3539-0063-48e7-b232-ebc7a5f0b898">
 <br>
 
 <br>
+
 **Range.java**<br>
 screenshot here
 <br>
 
-### Tests Added
+## Tests Added
 **DataUtilities.java**<br>
 
 <br>
