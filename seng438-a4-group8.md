@@ -29,14 +29,14 @@ In shiftWithNoZeroCrossing(), the mutation "changed conditional boundary" surviv
 In Range(double lower, double upper), the mutations "Decremented (--a) double local variable number 1" and "Incremented (--a) double local variable number 1" both survived in the instance when the lower was greater than the upper bound, causing the thrown error message to be returned improperly. The returned error message's values would have been altered from what the input truly was. For this, we implemented the test ```constructorErrorTest``` to check the message of the returned error, and ensure it matches a String correlating to the expected error message (with the correct lower and upper values). 
 ### 5. Mutant 5
 Stuff
-### 6. Range(double lower, double upper) - Killed
-In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
+### 6. Mutant 6
+Stuff
 ### 7. Mutant 7
 Stuff
 ### 8. Mutant 8
 Stuff
-### 9. Mutant 9
-Stuff
+### 9. Range(double lower, double upper) - Killed
+In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
 ### 10. getLength() - Survived
 In getLength(), the mutation "changed conditional boundary", "Negated double field upper", "Less or equal to less than", and "Less or equal to not equal" survives because the first mutant we create a range with a lower bound greater than the upper bound, this should lead to an IllegalArgumentException being because it violates the expected condition, and for other respective mutants, " it negated the upper bound comparison, potentially changing the logic", " it changed a less than or equal to comparison to less than. We need to ensure that the condition where lower is equal to upper is tested", "it changed a less than or equal to comparison to not equal". For this reason we implemented these test cases to Kill these mutations respectively: ```getLengthWithLowerGreaterThanUpper()```, ```getLengthWithLowerEqualToUpper()```, ```getLengthWithUpperEqualToLower()```, ```getLengthWithLowerLessThanUpper()```
 
