@@ -668,6 +668,47 @@ public class RangeTest {
     
     
     
+    
+    @Test
+    public void expandWithEqualBounds() {
+    	assertEquals(Range.expand(new Range(4,4), 0, 0), new Range(4,4));
+    }
+    
+    @Test
+    public void expandWithGreaterNegativeBoundTest() {
+    	assertEquals(Range.expand(exampleRange1, 0.2, 1), new Range(-1.4, 3));
+    }
+    
+    @Test
+    public void expandWithLowerNegativeBoundTest() {
+    	assertEquals(Range.expand(exampleRange1, 1.0, 0.2), new Range(-3, 1.4));
+    }
+    
+    @Test(expected= IllegalArgumentException.class)
+    public void expandNullTest() {
+    	Range.expand(null, 0, 0);
+    }
+    
+    @Test
+    public void shiftTwoArgNoCrossing() {
+    	assertEquals(Range.shift(exampleRange1, 2), new Range(0.0, 3.0));
+    }
+    
+    @Test
+    public void shiftTwoArgTest() {
+    	assertEquals(Range.shift(exampleRange2, 2), new Range(3, 7));
+    }
+    
+    @Test
+    public void shiftAttemptedWithNoCrossing() {
+    	assertEquals(Range.shift(exampleRange1, 2, false), new Range(0.0, 3.0));
+    }
+    
+    @Test
+    public void shiftWithCrossing() {
+    	assertEquals(Range.shift(exampleRange1, 2, true), new Range(1,3));
+    }
+    
     @Test(expected = IllegalArgumentException.class)
     public void shiftWithNullTest() {
     	Range.shift(null, 0, false);
@@ -735,7 +776,7 @@ public class RangeTest {
  	public void toStringTest() {
  		assertEquals(exampleRange1.toString(), "Range[" + -1.0 + "," + 1.0 + "]");
  	}
-
+ 	
 	@Test
     public void constructorErrorTest() {
     	Range newRange;
@@ -746,40 +787,39 @@ public class RangeTest {
     		String expected = "Range(double, double): require lower (5.0) <= upper (2.0).";
     		assertEquals(expected, e.getMessage());
     	}
-    	
+
     }
+	
 	// #1
-	 	@Test(expected = IllegalArgumentException.class)
-	 	public void getLengthWithLowerGreaterThanUpper() {
-	 	    Range range = new Range(2, 1); // Lower bound is greater than upper bound
-	 	    range.getLength(); // This should throw an IllegalArgumentException
-	 	}
-	 	
-	 	// #2
-	 	@Test
-	 	public void getLengthWithLowerEqualToUpper() {
-	 	    Range range = new Range(1, 1); // Lower bound equals upper bound
-	 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
-	 	}
+ 	@Test(expected = IllegalArgumentException.class)
+ 	public void getLengthWithLowerGreaterThanUpper() {
+ 	    Range range = new Range(2, 1); // Lower bound is greater than upper bound
+ 	    range.getLength(); // This should throw an IllegalArgumentException
+ 	}
 
-	 	
-	 	// #3
-	 	@Test
-	 	public void getLengthWithUpperEqualToLower() {
-	 	    Range range = new Range(1, 1); // Upper bound equals lower bound
-	 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
-	 	}
+ 	// #2
+ 	@Test
+ 	public void getLengthWithLowerEqualToUpper() {
+ 	    Range range = new Range(1, 1); // Lower bound equals upper bound
+ 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
+ 	}
 
-	 	
-	 	// #4
-	 	
-	 	@Test
-	 	public void getLengthWithLowerLessThanUpper() {
-	 	    Range range = new Range(1, 2); // Lower bound less than upper bound
-	 	    assertEquals(1.0, range.getLength(), 0.000001); // Expected length is upper - lower
-	 	}
- 	
- 	
+
+ 	// #3
+ 	@Test
+ 	public void getLengthWithUpperEqualToLower() {
+ 	    Range range = new Range(1, 1); // Upper bound equals lower bound
+ 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
+ 	}
+
+
+ 	// #4
+
+ 	@Test
+ 	public void getLengthWithLowerLessThanUpper() {
+ 	    Range range = new Range(1, 2); // Lower bound less than upper bound
+ 	    assertEquals(1.0, range.getLength(), 0.000001); // Expected length is upper - lower
+ 	}
  	/*
      * 
      * 
