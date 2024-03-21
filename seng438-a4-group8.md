@@ -37,8 +37,8 @@ Stuff
 Stuff
 ### 9. Mutant 9
 Stuff
-### 10. Mutant 10
-Stuff
+### 10. getLength() - Survived
+In getLength(), the mutation "changed conditional boundary", "Negated double field upper", "Less or equal to less than", and "Less or equal to not equal" survives because the first mutant we create a range with a lower bound greater than the upper bound, this should lead to an IllegalArgumentException being because it violates the expected condition, and for other respective mutants, " it negated the upper bound comparison, potentially changing the logic", " it changed a less than or equal to comparison to less than. We need to ensure that the condition where lower is equal to upper is tested", "it changed a less than or equal to comparison to not equal". For this reason we implemented these test cases to Kill these mutations respectively: ```getLengthWithLowerGreaterThanUpper()```, ```getLengthWithLowerEqualToUpper()```, ```getLengthWithUpperEqualToLower()```, ```getLengthWithLowerLessThanUpper()```
 
 # Report all the statistics and the mutation score for each test class
 
