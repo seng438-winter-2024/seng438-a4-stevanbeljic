@@ -789,6 +789,10 @@ public class RangeTest {
     	}
 
     }
+
+	
+//getLenght()-------------------------------------------
+
 	
 	// #1
  	@Test(expected = IllegalArgumentException.class)
