@@ -19,25 +19,25 @@ The first objective of the lab is to utilize mutation testing tools (such as Pit
 The second objective of the lab is to learn how to perform automated GUI testing using tools such as Selenium, and how record and replay tools can be beneficial towards the development of GUIs.
 
 # Analysis of 10 Mutants of the Range class 
-### 1.getCentralValue() - Survived
+### 1. getCentralValue() - Survived
 In getCentralValue(), the mutation "replaced double return with 0.0d" survives because we only have a single test which tests the method, and the test expects a value of 0 to be returned. Therefore, by implementing another test wherein it expects a returned value not equal to 0, such as the central value between 1 and 3 which would be 2, we can catch and kill this mutant. This was done in ```testCentralValuePositive```.
-### 2.intersects() - Survived
+### 2. intersects() - Survived
 In intersects(), the mutation "changed conditional boundary" survives because before we did not have a test which tested an intersect which occurred precisely on the boundary condition. We had a test case, ```intersectsOnBoundsTest```, however it was impoperly written and did not actually test for intersections at the boundaries. The test's conditions have been changed to test intersections on the lower bound of the provided range (1, 2) as well as another test has been created to test intersections at the upper bound of the provided range (-3, -1).
-### 3.shiftWithNoZeroCrossing() - Survived
+### 3. shiftWithNoZeroCrossing() - Survived
 In shiftWithNoZeroCrossing(), the mutation "changed conditional boundary" survives because we never tested that method being called where both values are negative, or where the sum of either value and the delta is still below 0. Two tests are added to the test suite, ```shiftWithNoZeroCrossingBothZeroTest``` with values 0, 0, and a delta of 1, and ```shiftWithNoZeroCrossingUpperZeroTest``` with values -5, -3, and a delta of 2 to kill these mutants.
 ### 4. Range(double lower, double upper) - Survived
 In Range(double lower, double upper), the mutations "Decremented (--a) double local variable number 1" and "Incremented (--a) double local variable number 1" both survived in the instance when the lower was greater than the upper bound, causing the thrown error message to be returned improperly. The returned error message's values would have been altered from what the input truly was. For this, we implemented the test ```constructorErrorTest``` to check the message of the returned error, and ensure it matches a String correlating to the expected error message (with the correct lower and upper values). 
-### 5.Mutant 5
+### 5. Mutant 5
 Stuff
-### 6.Range(double lower, double upper) - Killed
+### 6. Range(double lower, double upper) - Killed
 In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
-### 7.Mutant 7
+### 7. Mutant 7
 Stuff
-### 8.Mutant 8
+### 8. Mutant 8
 Stuff
-### 9.Mutant 9
+### 9. Mutant 9
 Stuff
-### 10.Mutant 10
+### 10. Mutant 10
 Stuff
 
 # Report all the statistics and the mutation score for each test class
