@@ -735,6 +735,19 @@ public class RangeTest {
  	public void toStringTest() {
  		assertEquals(exampleRange1.toString(), "Range[" + -1.0 + "," + 1.0 + "]");
  	}
+
+	@Test
+    public void constructorErrorTest() {
+    	Range newRange;
+    	try {
+    		newRange = new Range(5, 2);
+    		fail("Should not be reached");
+    	} catch(Exception e) {
+    		String expected = "Range(double, double): require lower (5.0) <= upper (2.0).";
+    		assertEquals(expected, e.getMessage());
+    	}
+    	
+    }
  	
  	
  	/*
