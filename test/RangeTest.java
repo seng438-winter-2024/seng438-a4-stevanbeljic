@@ -748,6 +748,36 @@ public class RangeTest {
     	}
     	
     }
+	// #1
+	 	@Test(expected = IllegalArgumentException.class)
+	 	public void getLengthWithLowerGreaterThanUpper() {
+	 	    Range range = new Range(2, 1); // Lower bound is greater than upper bound
+	 	    range.getLength(); // This should throw an IllegalArgumentException
+	 	}
+	 	
+	 	// #2
+	 	@Test
+	 	public void getLengthWithLowerEqualToUpper() {
+	 	    Range range = new Range(1, 1); // Lower bound equals upper bound
+	 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
+	 	}
+
+	 	
+	 	// #3
+	 	@Test
+	 	public void getLengthWithUpperEqualToLower() {
+	 	    Range range = new Range(1, 1); // Upper bound equals lower bound
+	 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
+	 	}
+
+	 	
+	 	// #4
+	 	
+	 	@Test
+	 	public void getLengthWithLowerLessThanUpper() {
+	 	    Range range = new Range(1, 2); // Lower bound less than upper bound
+	 	    assertEquals(1.0, range.getLength(), 0.000001); // Expected length is upper - lower
+	 	}
  	
  	
  	/*
