@@ -665,13 +665,76 @@ public class RangeTest {
         assertEquals(upper, range.getUpperBound(), 0.0);
     }
  	
+    
+    
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void shiftWithNullTest() {
+    	Range.shift(null, 0, false);
+    }
+    
+    @Test
+    public void scaleWithZeroTest() {
+    	Range.scale(exampleRange3, 0);
+    }
+    
+    @Test
+    public void scaleWithDecimalTest() {
+    	Range.scale(exampleRange1, 0.5);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void scaleWithNullTest() {
+    	Range.scale(null, 2);
+    }
+    
+    @Test
+    public void equalsFalseUpperBoundGreaterTest() {
+    	assertFalse(exampleRange1.equals(new Range(-1, 0)));
+    }
+    
+    @Test
+    public void equalsFalseUpperBoundLessTest() {
+    	assertFalse(exampleRange1.equals(new Range(-1, 2)));
+    }
+    
+    @Test
+    public void equalsFalseLowerBoundGreaterTest() {
+    	assertFalse(exampleRange1.equals(new Range(-2, 1)));
+    }
+    
+    @Test
+    public void equalsFalseLowerBoundLessTest() {
+    	assertFalse(exampleRange1.equals(new Range(0, 1)));
+    }
+   
+    @Test
+    public void equalsFalseGreaterThanLowerTest() {
+    	assertFalse(exampleRange1.equals(exampleRange3));
+    }
+    
+    @Test
+    public void equalsFalseLessThanLowerTest() {
+    	assertFalse(exampleRange1.equals(exampleRange2));
+    }
+    
+ 	
+    @Test
+    public void equalsTrueTest() {
+    	assertTrue(exampleRange1.equals(exampleRange1));
+    }
  	
  	
+ 	@Test
+ 	public void NaNRangeTest() {
+ 		Range nanRange = new Range(Double.NaN, Double.NaN);
+ 		assertTrue(nanRange.isNaNRange());
+ 	}
  	
- 	
- 	
- 	
- 	
+ 	@Test
+ 	public void toStringTest() {
+ 		assertEquals(exampleRange1.toString(), "Range[" + -1.0 + "," + 1.0 + "]");
+ 	}
  	
  	
  	/*
