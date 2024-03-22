@@ -31,8 +31,8 @@ In Range(double lower, double upper), the mutations "Decremented (a--) double lo
 In isNaNRange(), multiple mutations that involved changing the values of the bounds of the Range object such as "negated double field lower" and "negated double field greater" survived because we had only one test case that had both bounds as NaN (Not a number) values, which returns the same NaN when negated. Therfore, the mutants were not detected by the single test case so we implemented additional test cases that tried for only one bound to be NaN and the other to be a number which could be negated.
 ### 6. equals(Object obj) - Killed
 In equals, it takes any object and checks to see if it is a Range object and if it is, it returns true if it equal to another's bounds. The mutants that were introduced negated the condition checks for the bounds, made the conditions true, and changed equals to greater than or equal to and less than or equal to. The equals method did not have any test cases in the test suite and it was only ever used in assertEquals statements, meaning that the output was already intended to be true. To address this, we added test cases that had obviously unequal Range objects in the bound values that killed these mutants that changed conditions and negations.
-### 7. Mutant 7
-Stuff
+### 7. scale(Range base, double factor) - Killed
+In scale, it is given a Range object and a factor that is multiplied with the bounds to change them. A specific type of mutant that was introduced to this method was that it removed the check for a null Range object in the method, which went unnoticed as there was no test case that tried to call this method with a null object. Therefore, a test case was added that passed a null to the scale function to kill the mutant and ensuring that the null check actually worked.
 ### 8. Mutant 8
 Stuff
 ### 9. Range(double lower, double upper) - Killed
