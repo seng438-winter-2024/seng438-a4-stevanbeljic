@@ -1180,6 +1180,254 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "39b94948-2fbe-4673-9515-4950cd6338c0",
+    "name": "Contact-Us Info. Verification",
+    "commands": [{
+      "id": "d0980844-c06c-47ff-be2e-b06f9830f957",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df1748fc-fa76-4596-ab39-ad9ee0266b4f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x992",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be75baf3-eb92-4736-a09e-ab845a696b77",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ae979ba-ff09-4b4b-b333-2fdc5007cbe6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,754.4000244140625)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d5aac8d-ab7f-4542-9ce1-8fe958907488",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,6684)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16932400-2f03-4c4e-b54b-35283653413e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact us",
+      "targets": [
+        ["linkText=Contact us", "linkText"],
+        ["css=.footer-column__item:nth-child(4) .footer-category__item:nth-child(2) > .footer-category__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact us')]", "xpath:link"],
+        ["xpath=//div[@id='wrap']/footer/div/div/div[3]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/support/contact/')])[3]", "xpath:href"],
+        ["xpath=//div[3]/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact us')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "310be428-da88-48cf-8b86-1daaec87560d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,448)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "819c6cd2-e7ab-4cbf-be5f-04d2c6995f28",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Help&Contact Us | Samsung Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdb70c28-4195-4248-9d59-afdb114a3016",
+      "comment": "",
+      "command": "click",
+      "target": "css=#contactinfo .su11-link-card__list-item:nth-child(3) > .su11-link-card__list-item-wrap",
+      "targets": [
+        ["css=#contactinfo .su11-link-card__list-item:nth-child(3) > .su11-link-card__list-item-wrap", "css:finder"],
+        ["xpath=//div[@id='contactinfo']/div/div/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div/div/div[3]/div/div/div/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "991e0609-61a3-4480-8672-0096262dbbd4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#contactinfo .su11-link-card__list-item:nth-child(3) .su11-link-card__list-item-description",
+      "targets": [
+        ["css=#contactinfo .su11-link-card__list-item:nth-child(3) .su11-link-card__list-item-description", "css:finder"],
+        ["xpath=//div[@id='contactinfo']/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div[3]/div/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c9506fe-1ca3-4cb8-b3db-e3574b9ca0d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#contactinfo .su11-link-card__list-item:nth-child(3) > .su11-link-card__list-item-wrap",
+      "targets": [
+        ["css=#contactinfo .su11-link-card__list-item:nth-child(3) > .su11-link-card__list-item-wrap", "css:finder"],
+        ["xpath=//div[@id='contactinfo']/div/div/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div/div/div[3]/div/div/div/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bfc308e-e2ab-4af7-93b2-709d4df45817",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#contactinfo .su11-link-card__list-item:nth-child(3) .su11-link-card__list-item-description",
+      "targets": [
+        ["css=#contactinfo .su11-link-card__list-item:nth-child(3) .su11-link-card__list-item-description", "css:finder"],
+        ["xpath=//div[@id='contactinfo']/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div[3]/div/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": "Send us an e-mail for order enquires at info.seca@samsung.com\\n\\n1-800-SAMSUNG (1-800-726-7864)\\nMon-Sun: 9 AM – 9 PM(EST)\\n\\nChat with us for online shopping support\\nAvailable 24/7"
+    }]
+  }, {
+    "id": "ffb121c3-649e-4d08-b192-1a3a3a762a63",
+    "name": "Samsung Home page",
+    "commands": [{
+      "id": "4ed9346b-7c7e-49a0-bd15-eec7914d003b",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf55113d-60cf-4ab4-ba21-3d057408370a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "784x976",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "012658f3-5dd8-4c12-a1db-5d33f99cf840",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f086406-1d78-4c56-a87e-0df4a2b466ff",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nv00-gnb__l0-menu:nth-child(3) > .nv00-gnb__l0-menu-btn",
+      "targets": [
+        ["css=.nv00-gnb__l0-menu:nth-child(3) > .nv00-gnb__l0-menu-btn", "css:finder"],
+        ["xpath=//nav[@id='component-id']/div/div[5]/ul/li[3]/button", "xpath:idRelative"],
+        ["xpath=//li[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'TV & AV')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3b63beb-3531-458e-9152-f6f217ac8048",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.nv00-gnb__l0-menu:nth-child(3) > .nv00-gnb__l0-menu-btn",
+      "targets": [
+        ["css=.nv00-gnb__l0-menu:nth-child(3) > .nv00-gnb__l0-menu-btn", "css:finder"],
+        ["xpath=//nav[@id='component-id']/div/div[5]/ul/li[3]/button", "xpath:idRelative"],
+        ["xpath=//li[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'TV & AV')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bb14486-47b6-4152-9e5c-97be1df42b55",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.open > .nv00-gnb__l1-menu-wrap:nth-child(3) .nv00-gnb__l2-menu:nth-child(6) > .nv00-gnb__l2-menu-link",
+      "targets": [
+        ["css=.open > .nv00-gnb__l1-menu-wrap:nth-child(3) .nv00-gnb__l2-menu:nth-child(6) > .nv00-gnb__l2-menu-link", "css:finder"],
+        ["xpath=//nav[@id='component-id']/div/div[5]/ul/li[3]/div/div[2]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ca/tvs/the-frame/')]", "xpath:href"],
+        ["xpath=//li[3]/div/div[2]/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c269638c-6d60-4ef4-b6fb-abae236d2b17",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.open > .nv00-gnb__l1-menu-wrap:nth-child(3) .nv00-gnb__l2-menu:nth-child(6) > .nv00-gnb__l2-menu-link",
+      "targets": [
+        ["css=.open > .nv00-gnb__l1-menu-wrap:nth-child(3) .nv00-gnb__l2-menu:nth-child(6) > .nv00-gnb__l2-menu-link", "css:finder"],
+        ["xpath=//nav[@id='component-id']/div/div[5]/ul/li[3]/div/div[2]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ca/tvs/the-frame/')]", "xpath:href"],
+        ["xpath=//li[3]/div/div[2]/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58a04635-ec99-4e67-b895-58dca4d7c540",
+      "comment": "",
+      "command": "click",
+      "target": "css=.open > .nv00-gnb__l1-menu-wrap:nth-child(3) .nv00-gnb__l2-menu:nth-child(3) > .nv00-gnb__l2-menu-link",
+      "targets": [
+        ["css=.open > .nv00-gnb__l1-menu-wrap:nth-child(3) .nv00-gnb__l2-menu:nth-child(3) > .nv00-gnb__l2-menu-link", "css:finder"],
+        ["xpath=//nav[@id='component-id']/div/div[5]/ul/li[3]/div/div[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ca/tvs/oled-tv/')])[2]", "xpath:href"],
+        ["xpath=//li[3]/div/div[2]/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e7f5ad3-2cdd-4ca1-80d9-23b70a7c9836",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3ef1781-c71c-4465-97e6-dfae270c27ee",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=Logo_ratio",
+      "targets": [
+        ["id=Logo_ratio", "id"],
+        ["css=#Logo_ratio", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2aa2fdb-3c85-4634-bf4c-ddfb297b7384",
+      "comment": "",
+      "command": "click",
+      "target": "id=Logo_ratio",
+      "targets": [
+        ["id=Logo_ratio", "id"],
+        ["css=#Logo_ratio", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0c2554a-72e3-401f-9862-6648481d2235",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a39d046-6257-4585-a214-7c0402dbd95c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=Logo_ratio",
+      "targets": [
+        ["id=Logo_ratio", "id"],
+        ["css=#Logo_ratio", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "848e0f30-b7ee-480c-8cc2-d1f4eb97afc4",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Samsung Canada | Mobile | TV | Home Appliances",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "5b9f21bb-c767-4077-9d79-b9fda429c037",
