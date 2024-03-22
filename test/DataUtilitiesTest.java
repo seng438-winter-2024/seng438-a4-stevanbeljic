@@ -903,4 +903,51 @@ public void testGetCumulativePercentagesNonEmptyData() {
 			assertEquals(expectedResult, i, 0.00001);
 		}
 		
+		@Test
+		public void calculateRowTotalNull2Param() {
+			try {
+				double total = DataUtilities.calculateRowTotal(null, 0);
+			} catch (Exception e) {
+				assertTrue("Throw error not IllegalArgumentException", e instanceof IllegalArgumentException);
+			}
+		}
+		
+		@Test
+		public void calculateRowTotalNull3Param() {
+			try {
+				int[] validCols = {1};
+				double total = DataUtilities.calculateRowTotal(null, 0, validCols);
+			} catch (Exception e) {
+				assertTrue("Throw error not IllegalArgumentException", e instanceof IllegalArgumentException);
+			}
+		}
+		
+		@Test
+		public void calculateColumnTotalNull2Param() {
+			try {
+				double total = DataUtilities.calculateColumnTotal(null, 0);
+			} catch (Exception e) {
+				assertTrue("Throw error not IllegalArgumentException", e instanceof IllegalArgumentException);
+			}
+		}
+		
+		@Test
+		public void calculateColumnTotalNull3Param() {
+			try {
+				int[] validRows = {1};
+				double total = DataUtilities.calculateColumnTotal(null, 0, validRows);
+			} catch (Exception e) {
+				assertTrue("Throw error not IllegalArgumentException", e instanceof IllegalArgumentException);
+			}
+		}
+		
+		@Test
+		public void cloneNull() {
+			try {
+				double[][] clone = DataUtilities.clone(null);
+			} catch (Exception e) {
+				assertTrue("Throw error not IllegalArgumentException", e instanceof IllegalArgumentException);
+			}
+		}
+		
 }
