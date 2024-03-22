@@ -494,6 +494,13 @@
       ],
       "value": ""
     }, {
+      "id": "2620ee2e-bf91-4b41-8c85-42542d1d878b",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "id=gnb-search-keyword",
+      "targets": [],
+      "value": "30000"
+    }, {
       "id": "c279e9ec-2120-4a31-9ed5-994675ed90e4",
       "comment": "",
       "command": "type",
@@ -636,6 +643,13 @@
       ],
       "value": ""
     }, {
+      "id": "5620165c-8dff-426f-8716-34ffe52642ee",
+      "comment": "",
+      "command": "verifyEditable",
+      "target": "id=gnb-search-keyword",
+      "targets": [],
+      "value": "30000"
+    }, {
       "id": "7f8d460c-53aa-4189-84ac-709eac1934ca",
       "comment": "",
       "command": "type",
@@ -718,16 +732,9 @@
     }, {
       "id": "49d72e00-bdaf-48b2-b197-a4d116d7668a",
       "comment": "",
-      "command": "waitForElementEditable",
+      "command": "verifyEditable",
       "target": "id=gnb-search-keyword",
-      "targets": [
-        ["id=gnb-search-keyword", "id"],
-        ["name=search", "name"],
-        ["css=#gnb-search-keyword", "css:finder"],
-        ["xpath=//input[@id='gnb-search-keyword']", "xpath:attributes"],
-        ["xpath=//div[@id='wrap']/section[3]/div[3]/div/form/fieldset/div/input", "xpath:idRelative"],
-        ["xpath=//fieldset/div/input", "xpath:position"]
-      ],
+      "targets": [],
       "value": "30000"
     }, {
       "id": "b2358fd5-3882-41f3-9515-84afabd862fc",
