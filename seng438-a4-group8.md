@@ -54,7 +54,7 @@ In getLength(), the mutation "changed conditional boundary", "Negated double fie
 
 ## Updated Scores
 **DataUtilities.java**<br>
-<img width="608" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/ab9f3539-0063-48e7-b232-ebc7a5f0b898">
+<img width="603" alt="image" src="https://github.com/seng438-winter-2024/seng438-a4-stevanbeljic/assets/60798649/c98ec32f-95e6-4b98-adfa-73858a90920e">
 <br>
 <br>
 **Range.java**<br>
@@ -84,7 +84,7 @@ Various other tests were also added, or modified to include additional assertion
 <br>
 
 # Analysis drawn on the effectiveness of each of the test classes
-It was ultimately quite difficult to improve the mutation score of both classes. Nontheless, we managed to improve the mutation score of Range.java by 10% (from 63% to 73%), and the score of DataUtilities.java by 12%. DataUtilities was improved through the creation of a few new test methods which were added in the Assignment 3 version but were not present in the Assignment 2 version, and by modifying existing tests to check for any changes to variables through the addition of extra assertion statements. The source code was also changed slightly to remove any dead code wherein mutations were being created but no coverage was possible, also improving the score. We had more difficulty improving Range.java, as it had many more methods with more conditional statements. Here, we primarily focused on testing code that was not tested much in previous assignments, such as the thrown error in the constructor or by checking upper and lower bound values after the calling of another method.
+It was ultimately quite difficult to improve the mutation score of both classes. Nontheless, we managed to improve the mutation score of Range.java by 10% (from 63% to 73%), and the score of DataUtilities.java by 13%(from 77% to 90%). DataUtilities was improved through the creation of a few new test methods which were added in the Assignment 3 version but were not present in the Assignment 2 version, and by modifying existing tests to check for any changes to variables through the addition of extra assertion statements. The source code was also changed slightly to remove any dead code wherein mutations were being created but no coverage was possible, also improving the score. We had more difficulty improving Range.java, as it had many more methods with more conditional statements. Here, we primarily focused on testing code that was not tested much in previous assignments, such as the thrown error in the constructor or by checking upper and lower bound values after the calling of another method.
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 An equivalent mutant is a mutatation which did not change the expected output, yet it still differs from the orignal sourcecode of the program. Even though the mutation is different from the original source code, it is not explicitly wrong as it is mathematically equivalent to the original source code (it is effectively a synonym of the predicate). Thus, mutation scores are not completely accurate as they may understate the efficacy of the test suite and show that some mutations are not being killed, when in fact they are still behaving as the program initially intended.
