@@ -76,7 +76,7 @@ In getLength(), the mutation "changed conditional boundary", "Negated double fie
 An equivalent mutant is a mutatation which did not change the expected output, yet it still differs from the orignal sourcecode of the program. Even though the mutation is different from the original source code, it is not explicitly wrong as it is mathematically equivalent to the original source code (it is effectively a synonym of the predicate). Thus, mutation scores are not completely accurate as they may understate the efficacy of the test suite and show that some mutations are not being killed, when in fact they are still behaving as the program initially intended.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
-
+Our plan when trying to improve the mutation score was to use the PITest summary to got through every method and identify which mutants are equivalent so as to not waste time trying to make new cases that do not matter. We then identified which mutants we would try to kill and came up with new test cases that would accomplish that and ensured that they passed with the unmutated SUT. We then would introduce the mutants to see if the new test cases would fail and run the JUnit test instead of PIT as PIT takes a long time to execute.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 Mutation testing is beneficial as it increases confidence in the quality of both the system under test, as well as the test suite developed to test the SUT. Mutation testing is another tool to examine the quality of our test set and how effectively it tests the SUT, even with the intentional introduction of bugs. 
