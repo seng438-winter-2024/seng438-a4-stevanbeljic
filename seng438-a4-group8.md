@@ -63,11 +63,24 @@ In getLength(), the mutation "changed conditional boundary", "Negated double fie
 
 ## Tests Added
 **DataUtilities.java**<br>
-
+calculateRowTotalNull2Param()<br>
+calculateRowTotalNull3Param()<br>
+calculateColumnTotalNull2Param()<br>
+calculateColumnTotalNull3Param()<br>
+cloneNull()<br>
 <br>
 
 **Range.java**<br>
-
+getLengthWithLowerGreaterThanUpper()<br>
+getLengthWithLowerEqualToUpper()<br>
+getLengthWithUpperEqualToLower()<br>
+getLengthWithLowerLessThanUpper()<br>
+constructorErrorTest()<br>
+toStringTest()<br>
+NaNRangeTest()<br>
+testCentralValuePositive()<br>
+<br>
+Various other tests were also added, or modified to include additional assertions to check for "increment" and "decrement" mutations. These can be viewed under the respective test classes(DataUtilitiesTest.java and RangeTest.java) within the test directory.
 <br>
 
 # Analysis drawn on the effectiveness of each of the test classes
@@ -75,6 +88,8 @@ It was ultimately quite difficult to improve the mutation score of both classes.
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 An equivalent mutant is a mutatation which did not change the expected output, yet it still differs from the orignal sourcecode of the program. Even though the mutation is different from the original source code, it is not explicitly wrong as it is mathematically equivalent to the original source code (it is effectively a synonym of the predicate). Thus, mutation scores are not completely accurate as they may understate the efficacy of the test suite and show that some mutations are not being killed, when in fact they are still behaving as the program initially intended.
+
+For example, we encountered the mutant "less than changed to not equal to" in the calculateColumnTotal loop. Even though this is a mutation, it effectively functions the same as the original less than conditional operator. Therefore, this can not be tested for as testing for it will also cause errors in the regular execution of the test suit.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 Our plan when trying to improve the mutation score was to use the PITest summary to got through every method and identify which mutants are equivalent so as to not waste time trying to make new cases that do not matter. We then identified which mutants we would try to kill and came up with new test cases that would accomplish that and ensured that they passed with the unmutated SUT. We then would introduce the mutants to see if the new test cases would fail and run the JUnit test instead of PIT as PIT takes a long time to execute.
