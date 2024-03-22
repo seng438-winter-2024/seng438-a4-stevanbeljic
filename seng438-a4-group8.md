@@ -26,19 +26,19 @@ In intersects(), the mutation "changed conditional boundary" survives because be
 ### 3. shiftWithNoZeroCrossing() - Survived
 In shiftWithNoZeroCrossing(), the mutation "changed conditional boundary" survives because we never tested that method being called where both values are negative, or where the sum of either value and the delta is still below 0. Two tests are added to the test suite, ```shiftWithNoZeroCrossingBothZeroTest``` with values 0, 0, and a delta of 1, and ```shiftWithNoZeroCrossingUpperZeroTest``` with values -5, -3, and a delta of 2 to kill these mutants.
 ### 4. Range(double lower, double upper) - Survived
-In Range(double lower, double upper), the mutations "Decremented (--a) double local variable number 1" and "Incremented (--a) double local variable number 1" both survived in the instance when the lower was greater than the upper bound, causing the thrown error message to be returned improperly. The returned error message's values would have been altered from what the input truly was. For this, we implemented the test ```constructorErrorTest``` to check the message of the returned error, and ensure it matches a String correlating to the expected error message (with the correct lower and upper values). 
-### 5. Mutant 5
+In Range(double lower, double upper), the mutations "Decremented (a--) double local variable number 1" and "Incremented (a++) double local variable number 1" both survived in the instance when the lower was greater than the upper bound, causing the thrown error message to be returned improperly. The returned error message's values would have been altered from what the input truly was. For this, we implemented the test ```constructorErrorTest``` to check the message of the returned error, and ensure it matches a String correlating to the expected error message (with the correct lower and upper values). 
+### 5. isNaNRange() - Survived
+In isNaNRange(), multiple mutations that involved changing the values of the bounds of the Range object such as "negated double field lower" and "negated double field greater" survived because we had only one test case that had both bounds as NaN (Not a number) values, which returns the same NaN when negated. Therfore, the mutants were not detected by the single test case so we implemented additional test cases that tried for only one bound to be NaN and the other to be a number which could be negated.
+### 6. Mutant 6
 Stuff
-### 6. Range(double lower, double upper) - Killed
-In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
 ### 7. Mutant 7
 Stuff
 ### 8. Mutant 8
 Stuff
-### 9. Mutant 9
-Stuff
-### 10. Mutant 10
-Stuff
+### 9. Range(double lower, double upper) - Killed
+In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
+### 10. getLength() - Survived
+In getLength(), the mutation "changed conditional boundary", "Negated double field upper", "Less or equal to less than", and "Less or equal to not equal" survives because the first mutant we create a range with a lower bound greater than the upper bound, this should lead to an IllegalArgumentException being because it violates the expected condition, and for other respective mutants, " it negated the upper bound comparison, potentially changing the logic", " it changed a less than or equal to comparison to less than. We need to ensure that the condition where lower is equal to upper is tested", "it changed a less than or equal to comparison to not equal". For this reason we implemented these test cases to Kill these mutations respectively: ```getLengthWithLowerGreaterThanUpper()```, ```getLengthWithLowerEqualToUpper()```, ```getLengthWithUpperEqualToLower()```, ```getLengthWithLowerLessThanUpper()```
 
 # Report all the statistics and the mutation score for each test class
 
