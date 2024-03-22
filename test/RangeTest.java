@@ -227,6 +227,7 @@ public class RangeTest {
     @Test
     public void intersectsWithinBoundsTest() {
     	assertTrue("Ranges from -1 to 1 and 0 to 2 don't intersect as expected", exampleRange1.intersects(0.0, 2.0));
+    	
     }
     
     /*
@@ -583,10 +584,10 @@ public class RangeTest {
  		Range testRange1 = new Range(2, 6);
  		double lowerBound = 6;
  		double upperBound = 7;
- 		boolean testBool = testRange1.intersects(lowerBound, upperBound); // Seeing if range (2, 6) intersects with (6,
- 																			// 7)
+ 		boolean testBool = testRange1.intersects(lowerBound, upperBound); 
  		assertFalse("The expected output should be false", testBool);
- 		// assertion that expected value matches the actual value (false)
+ 		assertEquals(2, testRange1.getLowerBound(),0.0001d);
+ 		assertEquals(6, testRange1.getUpperBound(),0.0001d);
  	}
  	@Test
  	public void intersectsNarrow() {
@@ -746,7 +747,87 @@ public class RangeTest {
     		String expected = "Range(double, double): require lower (5.0) <= upper (2.0).";
     		assertEquals(expected, e.getMessage());
     	}
-    	
+    }
+	
+	@Test(expected = IllegalArgumentException.class)
+ 	public void getLengthWithLowerGreaterThanUpper() {
+ 	    Range range = new Range(2, 1); // Lower bound is greater than upper bound
+ 	    range.getLength(); // This should throw an IllegalArgumentException
+ 	}
+
+ 	// #2
+ 	@Test
+ 	public void getLengthWithLowerEqualToUpper() {
+ 	    Range range = new Range(1, 1); // Lower bound equals upper bound
+ 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
+ 	}
+
+
+ 	// #3
+ 	@Test
+ 	public void getLengthWithUpperEqualToLower() {
+ 	    Range range = new Range(1, 1); // Upper bound equals lower bound
+ 	    assertEquals(0.0, range.getLength(), 0.000001); // Expected length is 0
+ 	}
+
+
+ 	// #4
+
+ 	@Test
+ 	public void getLengthWithLowerLessThanUpper() {
+ 	    Range range = new Range(1, 2); // Lower bound less than upper bound
+ 	    assertEquals(1.0, range.getLength(), 0.000001); // Expected length is upper - lower
+ 	}
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	@Test
+    public void expandWithEqualBounds() {
+    	assertEquals(Range.expand(new Range(4,4), 0, 0), new Range(4,4));
+    }
+
+    @Test
+    public void expandWithGreaterNegativeBoundTest() {
+    	assertEquals(Range.expand(exampleRange1, 0.2, 1), new Range(-1.4, 3));
+    }
+
+    @Test
+    public void expandWithLowerNegativeBoundTest() {
+    	assertEquals(Range.expand(exampleRange1, 1.0, 0.2), new Range(-3, 1.4));
+    }
+
+    @Test(expected= IllegalArgumentException.class)
+    public void expandNullTest() {
+    	Range.expand(null, 0, 0);
+    }
+
+    @Test
+    public void shiftTwoArgNoCrossing() {
+    	assertEquals(Range.shift(exampleRange1, 2), new Range(0.0, 3.0));
+    }
+
+    @Test
+    public void shiftTwoArgTest() {
+    	assertEquals(Range.shift(exampleRange2, 2), new Range(3, 7));
+    }
+
+    @Test
+    public void shiftAttemptedWithNoCrossing() {
+    	assertEquals(Range.shift(exampleRange1, 2, false), new Range(0.0, 3.0));
+    }
+
+    @Test
+    public void shiftWithCrossing() {
+    	assertEquals(Range.shift(exampleRange1, 2, true), new Range(1,3));
     }
  	
  	
