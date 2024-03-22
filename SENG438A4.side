@@ -785,6 +785,153 @@
       ],
       "value": "FILTERS (1)"
     }]
+  }, {
+    "id": "887ceb29-2e0b-4536-988d-9ef8e86f14a3",
+    "name": "Add item to cart",
+    "commands": [{
+      "id": "ffe1f5bc-cfd2-4500-b875-fd205fbf9cc0",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f82cef9-9f22-4a9d-b6df-967d4f9f99e4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nv00-gnb__l0-menu:nth-child(5) > .nv00-gnb__l0-menu-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f52d84d-7d15-4fbb-8aa4-7386f14e146c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=USB Flash Drives",
+      "targets": [
+        ["linkText=USB Flash Drives", "linkText"],
+        ["css=.open > .nv00-gnb__l1-menu-wrap:nth-child(6) .nv00-gnb__l2-menu:nth-child(5) > .nv00-gnb__l2-menu-link", "css:finder"],
+        ["xpath=//a[contains(text(),'USB Flash Drives')]", "xpath:link"],
+        ["xpath=//nav[@id='component-id']/div/div[5]/ul/li[5]/div/div[5]/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '//www.samsung.com/ca/memory-storage/usb-flash-drive/')]", "xpath:href"],
+        ["xpath=//li[5]/div/div[5]/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'USB Flash Drives')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23d4664d-9024-4952-afa0-502385c86bd5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3278408-ac26-4fec-ac9a-c8173b6b7f47",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pd03-product-finder__content-item:nth-child(2) .pd03-product-card__product-name-text",
+      "targets": [
+        ["css=.pd03-product-finder__content-item:nth-child(2) .pd03-product-card__product-name-text", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[3]/div/div[3]/section/div/div[2]/div[2]/div/div[2]/div/div/div[2]/div[2]/div/a/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div[2]/div/a/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Samsung Fit Plus 256GB USB 3.1 Flash Drive')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da4fefc5-e5e2-4b18-bf4a-8699341a63e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pd03-product-finder__content-item:nth-child(2) .pd03-product-card__product-name-text",
+      "targets": [
+        ["css=.pd03-product-finder__content-item:nth-child(2) .pd03-product-card__product-name-text", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[3]/div/div[3]/section/div/div[2]/div[2]/div/div[2]/div/div/div[2]/div[2]/div/a/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div[2]/div/a/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Samsung Fit Plus 256GB USB 3.1 Flash Drive')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5762c1ba-bc08-4fd3-aee6-0d2cc7b414b7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50e546c3-dfdd-4b94-b87f-cdce685bbe54",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cost-box__cta > .cta--contained",
+      "targets": [
+        ["css=.cost-box__cta > .cta--contained", "css:finder"],
+        ["xpath=(//a[contains(text(),'Add to cart')])[2]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[4]/div[2]/div[3]/section/div[3]/div[2]/div/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[7]", "xpath:href"],
+        ["xpath=//div/span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50ddf8a8-90e5-4b7c-a0bb-e70118e65f09",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#product-uid-812081708 .name",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "795dc659-d576-41c3-9741-9e8e98ca70ea",
+    "name": "Remove Item From Cart",
+    "commands": [{
+      "id": "f2bbb95e-a581-4e93-a5bb-34995a451104",
+      "comment": "",
+      "command": "open",
+      "target": "/ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48eeb968-fb08-4df6-96c6-ce3815740bd9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71d7bd11-6491-4298-b5b5-43bfb88b5663",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23f5fa60-d745-4151-a85f-0b4e944dca02",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-global-cart-btn > .icon",
+      "targets": [
+        ["css=.js-global-cart-btn > .icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "21495bbb-dbc4-4469-a718-e35d2aa5c515",
+      "comment": "",
+      "command": "click",
+      "target": "css=.visible-inline-desktop > .btn-link > .icon-remove",
+      "targets": [
+        ["css=.visible-inline-desktop > .btn-link > .icon-remove", "css:finder"],
+        ["xpath=//li[@id='product-uid-810476076']/div/div/div[3]/div[2]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03b48af7-531a-4791-936e-0a4dcded43e9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.toko-title",
+      "targets": [
+        ["css=.toko-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Your cart is empty')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "5b9f21bb-c767-4077-9d79-b9fda429c037",
