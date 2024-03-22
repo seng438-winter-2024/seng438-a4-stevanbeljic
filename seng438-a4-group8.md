@@ -29,8 +29,8 @@ In shiftWithNoZeroCrossing(), the mutation "changed conditional boundary" surviv
 In Range(double lower, double upper), the mutations "Decremented (--a) double local variable number 1" and "Incremented (--a) double local variable number 1" both survived in the instance when the lower was greater than the upper bound, causing the thrown error message to be returned improperly. The returned error message's values would have been altered from what the input truly was. For this, we implemented the test ```constructorErrorTest``` to check the message of the returned error, and ensure it matches a String correlating to the expected error message (with the correct lower and upper values). 
 ### 5. isNaNRange() - Survived
 In isNaNRange(), multiple mutations that involved changing the values of the bounds of the Range object such as "negated double field lower" and "negated double field greater" survived because we had only one test case that had both bounds as NaN (Not a number) values, which returns the same NaN when negated. Therfore, the mutants were not detected by the single test case so we implemented additional test cases that tried for only one bound to be NaN and the other to be a number which could be negated.
-### 6. Range(double lower, double upper) - Killed
-In Range(double lower, double upper), the mutation "Decremented (--a) double local variable number 1" is killed by orginal test suite, ```constructorLowerGreaterThanUpperTest```. In this test case, you are intentionally passing arguments where the lower bound (2) is greater than the upper bound (1). If the mutant tries to bypass the check by decrementing these values, it should still fail this test case because the exception should still be thrown, indicating that the check was successfully bypassed. Therefore, this test case should kill the mutant. 
+### 6. Mutant 6
+Stuff
 ### 7. Mutant 7
 Stuff
 ### 8. Mutant 8
